@@ -1,9 +1,9 @@
-/* #F7EBEC, #DDBDD5, #AC9FBB, #59656F, #1D1E2C */
+/* #F7EBEC, #dfdfdf, #111111, #300505, #dfdfdf */
 
 body {
     text-align: center;
-    padding: 5px 30px;
-    background-color: #F7EBEC;
+    padding: 0px 15px;
+    background-color: #300505;
 }
 
 h1,
@@ -12,11 +12,14 @@ h2 {
 }
 
 header {
-    background: #AC9FBB;
+    background: #111111;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     height: 90px;
-    color: #1D1E2C;
+    color: #dfdfdf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
@@ -26,7 +29,7 @@ header h1 {
 }
 
 nav {
-    background: #DDBDD5;
+    background: #dfdfdf;
     text-align: left;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -50,7 +53,8 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #1D1E2C;
+    color: #111111;
+    transition: all 200ms;
     width: -webkit-fill-available;
 }
 
@@ -58,21 +62,21 @@ nav a:nth-child(1):hover {
     border-bottom-right-radius: 0px;
 }
 
-nav a:nth-child(2):hover {
+nav a:nth-child(2):hover, nav a:nth-child(3):hover  {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
 
-nav a:nth-child(3):hover {
+nav a:nth-child(4):hover {
     border-bottom-left-radius: 0px;
 }
 
 nav a:hover,
 .current {
-    background-color: #AC9FBB;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    color: #1D1E2C;
+    background-color: #111111;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    color: #dfdfdf;
 }
 
 
@@ -96,22 +100,22 @@ section {
     margin: 20px 0px;
     float: left;
     width: 110%;
-    background: #DDBDD5;
+    background: #dfdfdf;
     border-radius: 20px;
 }
 
 section>h1:first-of-type {
     margin: 0;
-    color: #1D1E2C;
-    background-color: #AC9FBB;
+    color: #dfdfdf;
+    background-color: #111111;
     padding: 10px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
     font-size: 20px;
 }
 
 article {
-    background: #DDBDD5;
+    background: #dfdfdf;
     padding: 20px;
     border-bottom-left-radius: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -139,9 +143,10 @@ article img {
     width: auto;
     height: 360px;
     margin-top: 20px;
-    border: 3px solid #59656F;
+    border: 3px solid #300505;
     border-radius: 20px;
     position: relative;
+    transition: opacity 0.5s ease-in-out;
 }
 
 article h2 {
@@ -160,18 +165,18 @@ aside {
 }
 
 aside h1 {
-    background-color: #AC9FBB;
+    background-color: #111111;
     font-size: 18px;
     padding: 10px;
     margin: 0;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    color: #1D1E2C;
+    color: #dfdfdf;
 }
 
 #redes,
 #favs {
-    background: #DDBDD5;
+    background: #dfdfdf;
     margin: 0;
     border-radius: 20px;
     display: flex;
@@ -185,7 +190,7 @@ aside h1 {
 
 hr {
     width: 80%;
-    border: 1px solid #ac9fbb;
+    border: 1px solid #111111;
     border-radius: 100%;
     margin-bottom: 0;
 }
@@ -200,7 +205,7 @@ hr {
 #favs img {
     margin: 0;
     width: 80px;
-    border: 3px solid #59656F;
+    border: 3px solid #300505;
     transition: transform 0.1s linear;
     margin-top: 8px;
     border-radius: 20px;
@@ -209,7 +214,7 @@ hr {
 #redes a,
 #favs a {
     text-decoration: none;
-    color: #1D1E2C;
+    color: #111111;
     height: auto;
 }
 
@@ -222,19 +227,46 @@ footer {
     justify-content: end;
 }
 
+button, input[type="submit"] {
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+#formBotón {
+    width: 500px;
+    height: 150px;
+    background-color: #111111;
+    border-radius: 20px;
+    color: #dfdfdf;
+    border: 3px solid #300505;
+    font-size: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+#formBotón:hover, input[type="submit"]:hover {
+    background-color: #300505;
+    border: 3px solid #111111;
+}
+
+#formBotón:active, footer button:active, input[type="submit"]:active {
+    box-shadow: inset 0px 16px 15px #000000;
+}
+
 footer button {
     border-radius: 20px;
     height: 50px;
     width: 218px;
     margin-top: 5px;
-    background-color: #DDBDD5;
+    background-color: #dfdfdf;
     border: none;
     font: 600 18px verdana;
     cursor: pointer;
 }
 
 footer button:hover {
-    background-color: #AC9FBB;
+    background-color: #111111;
+    color: #dfdfdf;
 }
 
 main {
@@ -243,7 +275,7 @@ main {
 }
 
 a {
-    color: #59656F;
+    color: #300505;
     font-family: verdana;
 }
 
@@ -259,11 +291,123 @@ nav a:hover {
     filter: brightness(1);
 }
 
+#countdown {
+    font-size: 5em;
+    text-align: center;
+    margin: 15% auto;
+    padding: 20px;
+    color: #111111;
+    text-shadow:  -1px -1px 0 #dfdfdf,  
+    1px -1px 0 #dfdfdf,
+    -1px 1px 0 #dfdfdf,
+    1px 1px 0 #dfdfdf;;
+    width: 80%;
+    max-width: 600px;
+}
+
+input {
+    margin-top: 5px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+    text-align: left;
+}
+
+.modalContent {
+    background-color: #dfdfdf;
+    margin: 5% auto;
+    padding: 20px;
+    border: 3px solid #111111;
+    width: 80%;
+    border-radius: 20px;
+    max-width: 600px;
+    display: none;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#puntaje {
+    align-content: center;
+    font-size: 25px;
+    text-align: center;
+}
+
+#puntajeNum {
+    font-weight: bold;
+    text-align: center; 
+    color: #300505;
+}
+
+.modalContent input {
+    border: 2px solid #300505;
+    background-color: #ffffff;
+}
+
+.modalContent input[type="radio"]:checked  {
+    accent-color: #111111;
+}
+
+.modalContent input[type="submit"] {
+    border-radius: 10px;
+    width: 150px;
+    border: 3px;
+    height: 35px;
+    font-weight: bold;
+    color: #111;
+    font-size: 15px;
+    border: 2px solid #111;
+}
+
+input[type="submit"]:hover {
+    background-color: #111;
+    color: #dfdfdf;
+}
+
+b {
+    color: #300505;
+}
+
+#form {
+    display: none;
+}
+
+.close {
+    color: #300505;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #111111;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#reloj {
+    padding: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
     scrollbar-width: auto;
-    scrollbar-color: #ac9fbb #f7ebec;
+    scrollbar-color: #111111 #f7ebec;
 }
 
 /* Chrome, Edge, and Safari */
@@ -276,7 +420,8 @@ nav a:hover {
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #ac9fbb;
+    background-color: #111111;
     border-radius: 10px;
     border: 3px double #ffffff;
 }
+

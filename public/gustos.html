@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/styles.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/public/styles/styles.css" />
+    <title>Mis Gustos</title>
 </head>
 
 <body>
     <header>
         <h1>Mi blog</h1>
+        <div id="reloj"></div>
     </header>
 
     <nav>
@@ -23,6 +24,9 @@
             </a>
             <a href="datos.html">
                 <li>Datos personales</li>
+            </a>
+            <a href="form.html">
+                <li>Cuestionario</li>
             </a>
         </ul>
     </nav>
@@ -53,7 +57,7 @@
                             Actualmente disfruto mucho de <b>programar</b> y espero poder terminar mi proyecto "<b>Aniguess</b>" nombrado en mi <a href="index.html">presentación</a> en unos meses para subirlo a la web y tal vez hacerlo una app para celulares.
                         </p>
                     </div>
-                    <img src="img/yo1.jpeg" alt=""/>
+                    <img id="gustos" onmouseover="over()" onmouseout="out()" src="img/yo1.jpeg" alt=""/>
                 </div>
             </article>
         </section>
@@ -75,6 +79,11 @@
         <a href="index.html"><button>Anterior</button></a>
         <a href="datos.html"><button>Siguiente</button></a>
     </footer>
+
+    <script src="/public/scripts/reloj.js"></script>
+    
+    <script src="/public/scripts/imagenes.js"></script>
+
 </body>
 
 </html>

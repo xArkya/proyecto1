@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/styles.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/public/styles/styles.css" />
+    <title>Datos Personales</title>
 </head>
 
 <body>
     <header>
         <h1>Mi blog</h1>
+        <div id="reloj"></div>
     </header>
 
     <nav>
@@ -21,8 +22,11 @@
             <a href="gustos.html">
                 <li>Mis gustos</li>
             </a>
-            <a class="current D" href="">
+            <a class="current M" href="">
                 <li>Datos personales</li>
+            </a>
+            <a href="form.html">
+                <li>Cuestionario</li>
             </a>
         </ul>
     </nav>
@@ -44,7 +48,9 @@
                         <li><b>Idiomas</b>: Español, Inglés, Portugués básico</li>
                         <li><b>Comida favorita</b>: Nuggets</li>
                         <li><b>Playa o montaña</b>: Montaña</li>
+                        <li><b>Número favorito</b>: 2</li>
                         <li><b>Dulce o salado</b>: Dulce</li>
+                        <li><b>Género musical favorito</b>: J-Rock</li>
                         <li><b>Color favorito</b>: Bordó</li>
                         <li><b>Animal favorito</b>: Peces del fango</li>
                        </ul>
@@ -55,7 +61,11 @@
     </main>
     <footer>
         <a href="gustos.html"><button>Anterior</button></a>
+        <a href="form.html"><button>Siguiente</button></a>
     </footer>
+
+    <script src="/public/scripts/reloj.js"></script>
+    
 </body>
 
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/styles/styles.css" />
+    <title>Cuestionario</title>
+</head>
+
+<body>
+    <header>
+        <h1>Mi blog</h1>
+        <div id="reloj"></div>
+    </header>
+
+    <nav>
+        <ul>
+            <a href="index.html">
+                <li>Presentación</li>
+            </a>
+            <a href="gustos.html">
+                <li>Mis gustos</li>
+            </a>
+            <a href="datos.html">
+                <li>Datos personales</li>
+            </a>
+            <a class="current D">
+                <li>Cuestionario</li>
+            </a>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Cuestionario Sobre Mí</h1>
+            <article>
+                <button id="formBotón">¡Respondé!</button>
+            </article>
+
+            <div id="modal" class="modal">
+
+                <div id="countdown" style="display: none;">5</div>
+
+                <div id="modalContent" class="modalContent">
+                    <span class="close">&times;</span>
+                    <div id="puntaje"><div id="mensaje"></div></div>
+                    <form id="form">
+                        <label for="nombre">¿Cuál es mi <b>nombre</b>?</label><br>
+                        <input autocomplete="off" type="text" id="nombre" name="nombre" required><br><br>
+                        <label for="edad">¿Cuántos <b>años</b> tengo?</label><br>
+                        <input autocomplete="off" type="number" id="edad" name="edad" required><br><br>
+                        <label for="num">¿Cuál es mi <b>número favorito</b>?</label><br>
+                        <input autocomplete="off" type="number" id="num" name="num" required><br><br>
+                        <label for="serie">¿Cuál es mi <b>serie favorita</b>?</label><br>
+                        <input autocomplete="off" type="text" id="serie" name="serie" required><br><br>
+                        <label for="PoM">¿Me gusta más la <b>playa</b> o la <b>montaña</b>?</label><br>
+                        <label for="Pom"><input type="radio" id="Pom" name="PoM" value="playa" required>Playa</label><br>
+                        <label for="poM"><input type="radio" id="poM" name="PoM" value="montaña" required>Montaña</label><br><br>
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="datos.html"><button>Anterior</button></a>
+    </footer>
+
+    <script src="/public/scripts/cuestionario.js"></script>
+    <script src="/public/scripts/reloj.js"></script>
+
+</body>
+
+</html>
